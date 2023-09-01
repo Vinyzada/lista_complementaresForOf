@@ -6,21 +6,12 @@
     Identifique a maior nota, a menor nota e também calcule a média obtida pelo aluno.
     */
 
-    //Entrada
-
     const notasAluno = [7, 5, 9, 8];                                                                
-    let maior = Math.max.apply(null, notasAluno);
-    let menor = Math.min.apply(null, notasAluno)
-    let media = 0
-    
+    let media = 0;
     for( nota of notasAluno){
-        media = media + nota
+        media = media + nota;
     }
-    document.write(`A maior nota entre as que ele tirou: ${maior} <br> A menor nota entre as que ele tirou: ${menor} <br>
-    a media das notas dele é: ${media/notasAluno.length}`)
-    //Processamento
-
-
-    //Saída
+    document.write(`A maior nota entre as que ele tirou: ${Math.max.apply(null, notasAluno)} <br> A menor nota entre as que ele tirou: ${Math.min.apply(null, notasAluno)} <br>
+    a media das notas dele é: ${media/notasAluno.length}`);
 
 </script>

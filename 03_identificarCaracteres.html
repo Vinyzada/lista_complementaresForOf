@@ -5,22 +5,17 @@
     Apresente as quantidades no final do programa.
     */
 
-    const palavra = prompt(`Insira a palavra que você quer que eu separe`)
-    let vogais = []
-    let casa = [1, 2, ... 100]
-    for(numero of casa){
-        if((palavra.substring(numero, 1)).toUpperCase == "A" || (palavra.substring(numero, 1)).toUpperCase == "I" || (palavra.substring(numero, 1)).toUpperCase == "E" || (palavra.substring(numero, 1)).toUpperCase == "O" || (palavra.substring(numero, 1)).toUpperCase == "U" ||){
-            
+    const palavra = window.prompt("Digite uma palavra sem o acento:");
+    let palavraSeparada = palavra.split('');
+    let vogais = 0;
+    const vogaisLista = ["a", "e", "i", "o", "u"];
+    for (letra of palavraSeparada) {
+        for (check of vogaisLista){
+            if(letra == check){
+                vogais++
+            }
         }
     }
-
-    //Entrada
-                                                                
-
-
-    //Processamento
-
-
-    //Saída
+    document.write(`Quantidade de vogais: ${vogais} <br> Quantidade de consoantes ${palavraSeparada.length - vogais}`);
 
 </script>

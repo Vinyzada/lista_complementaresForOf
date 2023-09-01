@@ -7,7 +7,20 @@
     */
 
     //Entrada
-
+    let bebidas = ["Cerveja", "Vinho", "Suco Natural", "Tequila", "Água", "Refrigerante", "Vodka"];
+    let maior = []
+    let menor = []
+    
+    for(bebida of bebidas){
+        let permicao = prompt(`"${bebida}" essa bebida é para maiores de idade? S-Sim ou N-Nâo`).toUpperCase()
+        if(permicao == "S"){
+            maior.push(bebida)
+        }
+        else if(permicao == "N"){
+            menor.push(bebida)
+        }
+    }
+    document.write(`Lista de bebidas para maiores de 18 anos: ${maior.join(", ")}<br> Lista de bebidas liberadas para menores: ${menor.join(", ")}.`)
 
     //Processamento
 
